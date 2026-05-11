@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rychlostní kanoistika | Svět na vodě</title>
+    <style>
+        /* --- CSS STYLY --- */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f4f4f4;
+            --accent-color: #ffcc00;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fafafa;
+        }
+
+        /* Navigace */
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero sekce */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://www.venturacanoekayak.org/content/uploads/2019/11/canoe-kayak-e1572617157152.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Obsahové sekce */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Galerie */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responzivita */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Extra výplň pro délku kódu a detailní formátování */
+        .spacer { height: 20px; }
+        .highlight { color: var(--primary-color); font-weight: bold; }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><h2>KANOE.cz</h2></div>
+            <ul>
+                <li><a href="#domu">Domů</a></li>
+                <li><a href="#historie">Historie sportu</a></li>
+                <li><a href="#galerie">Fotogalerie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="domu" class="hero">
+        <div>
+            <h1>Rychlostní kanoistika</h1>
+            <p>Síla, vytrvalost a harmonie s vodní hladinou.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>O sportu</h2>
+        <p>
+            Rychlostní kanoistika je olympijský vodní sport, ve kterém se závodníci snaží v co nejkratším čase 
+            urazit stanovenou vzdálenost. Závody se konají na klidné vodě v drahách vymezených bójkami. 
+            Sportovci využívají dva základní typy lodí: <span class="highlight">kajak (K)</span> a <span class="highlight">kanoe (C)</span>.
+        </p>
+        <p>
+            Kajakář v lodi sedí a k pohonu používá oboustranné pádlo. Kanoista v lodi klečí na jednom koleni 
+            a používá jednostranné pádlo. Tato disciplína vyžaduje neuvěřitelný smysl pro rovnováhu a 
+            koordinaci celého těla, nejen sílu paží.
+        </p>
+        <div class="spacer"></div>
+        <p>
+            Tradiční tratě olympijských her jsou 200m, 500m a 1000m. Každá z těchto tratí vyžaduje 
+            jiný typ přípravy – od čistě explozivní síly u sprintu na 200 metrů až po vytrvalostní 
+            kapacitu u kilometrové tratě.
+        </p>
+    </section>
+
+    <section id="historie" style="background-color: #eee; max-width: 100%; padding: 60px 10%;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2>Historie sportu</h2>
+            <p>
+                Kořeny kanoistiky sahají tisíce let do minulosti, kdy domorodé národy v Severní Americe 
+                a Grónsku používaly kanoe a kajaky k lovu, transportu a obchodu. Moderní sportovní kanoistika 
+                se však začala formovat v 19. století.
+            </p>
+            <p>
+                Za zakladatele moderní kanoistiky je považován <span class="highlight">John MacGregor</span>, 
+                který v roce 1865 postavil kanoistický kajak "Rob Roy" a propagoval cestování po řekách Evropy. 
+                První mezinárodní kanoistická federace (IRK) byla založena v roce 1924 v Kodani.
+            </p>
+            <p>
+                Na olympijských hrách se rychlostní kanoistika poprvé objevila jako ukázkový sport v roce 1924 
+                v Paříži, ale plnohodnotným členem olympijské rodiny se stala až v roce 1936 v Berlíně. 
+                Od té doby patří k nejúspěšnějším disciplínám v historii českého i československého sportu.
+            </p>
+            <div class="spacer"></div>
+            <h3>Česká stopa</h3>
+            <p>
+                Země v srdci Evropy vždy patřila ke světové špičce. Jména jako Martin Doktor, dvojnásobný 
+                olympijský vítěz z Atlanty 1996, nebo současná hvězda Josef Dostál, jsou zapsána zlatým 
+                písmem do historie tohoto sportu.
+            </p>
+        </div>
+    </section>
+
+    <section id="galerie">
+        <h2>Fotogalerie</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://www.polaritas.com/wp-content/uploads/2018/02/ASS4.jpg" alt="Kajakář na startu">
+                <div class="caption">Koncentrace před startem</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://americancanoe.org/wp-content/uploads/2024/09/nevin-harrison-2024.jpg" alt="Detail kanoe">
+                <div class="caption">Pohled na závodní kanoe </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.traininginparadise.eu/wp-content/uploads/technique-deifinition.jpg" alt="Závodníci na řece">
+                <div class="caption">Trénink </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://cdn.backpacker.com/wp-content/uploads/2024/07/48141729943_b0853987c1_k-1024x683.jpg?width=730" alt="Detail pádla">
+                <div class="caption">Technika pádlování je klíčová</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.canoeicf.com/sites/default/files/news-top-images/josef_dostal_canoe_sprint_samarkand_2024.jpg" alt="Cílová čára">
+                <div class="caption">Vítězství v cíli</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://rckc.ca/wp-content/uploads/2024/10/DSC02317.jpg" alt="Loděnice">
+                <div class="caption">Život s klubem </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Vybavení a technika</h3>
+        <p>V moderní kanoistice se lodě vyrábějí z kompozitních materiálů, jako jsou karbonová vlákna a kevlar. Díky tomu jsou lodě extrémně lehké (závodní singlkajak váží pouhých 12 kg), ale zároveň velmi tuhé. Každý gram navíc nebo nedostatečná tuhost může v cíli znamenat ztrátu drahocenných milisekund.</p>
+        <p>Kromě lodi je zásadní i pádlo. Dnešní "braca" (listy ve tvaru lžíce) umožňují maximální záběr a minimální odpor při výjezdu z vody. Správná technika vyžaduje zapojení celého těla – od nohou opřených o opěrku, přes rotaci trupu až po finální přenos síly skrze paže do pádla.</p>
+        <ul>
+            <li><strong>K1:</strong> Singl kajak (1 osoba)</li>
+            <li><strong>K2:</strong> Debl kajak (2 osoby)</li>
+            <li><strong>K4:</strong> Čtyřkajak (4 osoby)</li>
+            <li><strong>C1:</strong> Singl kanoe (1 osoba)</li>
+            <li><strong>C2:</strong> Debl kanoe (2 osoby)</li>
+        </ul>
+        <div class="spacer"></div>
+        <p>Zajímavostí je, že zatímco kajakáři používají kormidlo ovládané nohama, kanoisté musí loď řídit pouze pomocí pádla a náklonu lodi. To dělá z kanoe jednu z technicky nejnáročnějších disciplín vůbec.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Portál o rychlostní kanoistice. Vytvořeno pro vzdělávací účely.</p>
+        <p>Sledujte nás na sociálních sítích pro více informací o regatách a výsledcích.</p>
+    </footer>
+
+    </body>
+</html>
